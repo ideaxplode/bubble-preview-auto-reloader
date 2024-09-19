@@ -27,3 +27,5 @@ Since this extension is still in Beta, you need to manually install this in Chro
 ## Settings
 
 You can access the extension's Settings page by going into Extensions -> Bubble Preview Auto-Reloader -> Menu -> Options
+
+For any setting change to take effect, please manually refresh the Preview tab once.
