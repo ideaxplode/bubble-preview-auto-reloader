@@ -17,7 +17,7 @@ NOTE: This is a Chrome extension.
 
 ## Installation
 
-Since this extension is still in Beta, you need to manually install this in Chrome.
+Since this extension is still in Beta, you need to manually install it in Chrome.
 
 1. Download this repository and extract the files to a folder
 2. Open Chrome and navigate to **chrome://extensions/**
