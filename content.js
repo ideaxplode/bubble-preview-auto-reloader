@@ -4,8 +4,19 @@ let reloadImmediately = false;
 let updateDetected = false;
 let titleModified = false;
 
-// Function to reload the page safely
+// Debounce mechanism to prevent multiple reloads
+const reloadCooldown = 1000; // milliseconds
+let lastReloadTime = 0;
+
+// Function to reload the page safely with debounce
 function safeReload() {
+  const now = Date.now();
+  if (now - lastReloadTime < reloadCooldown) {
+    console.log('Skipping reload to prevent multiple reloads.');
+    return;
+  }
+  lastReloadTime = now;
+
   if (!reloadTimeout) {
     console.log('Reloading page due to detected update notification.');
     location.reload();
@@ -24,18 +35,19 @@ function checkLastChild() {
     const textContent = lastChild.textContent;
     if (textContent === contentToMatch) {
       // Update detected
+      // Modify the page title to indicate pending update
+      if (!titleModified) {
+        document.title = '* ' + document.title;
+        titleModified = true;
+      }
+
       if (reloadImmediately) {
         // Reload immediately
         safeReload();
       } else {
-        // Set flag to reload when tab becomes active
+        // Set flag to reload when tab becomes active or window gains focus
         updateDetected = true;
-        console.log('Update detected. Will reload when tab becomes active.');
-        // Modify the page title to indicate pending update
-        if (!titleModified) {
-          document.title = '* ' + document.title;
-          titleModified = true;
-        }
+        console.log('Update detected. Will reload when tab becomes active or window gains focus.');
       }
       return true;
     }
@@ -46,7 +58,7 @@ function checkLastChild() {
 // Listen for messages from the background script
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === 'tabActivated' && updateDetected) {
-    console.log('Tab activated. Reloading due to previous update detection.');
+    console.log('Tab activated or window focused. Reloading due to previous update detection.');
     safeReload();
     updateDetected = false;
     // Title will reset after reload, but reset variables just in case
