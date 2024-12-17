@@ -1,12 +1,12 @@
-# Bubble Preview Auto-Reloader
+# Bubble Hot Reloader
 
-Automatically reloads Bubble.io's Preview tab when an update is detected!
+Automatically reloads Bubble.io's Preview tab whenever you make a change to the app. No need for manual reloads!
 
 NOTE: This is a Chrome extension.
 
 ## Description
 
-**Bubble Preview Auto-Reloader** eases your development experience using [Bubble.io](https://bubble.io) by automatically reloading your Preview tab in Chrome when you make changes in the Bubble editor. No more manual refreshes — stay focused on building your app!
+**Bubble Hot Reloader** eases your development experience using [Bubble.io](https://bubble.io) by automatically reloading your Preview tab in Chrome when you make changes in the Bubble editor. No more manual refreshes — stay focused on building your app!
 
 ## Features
 
