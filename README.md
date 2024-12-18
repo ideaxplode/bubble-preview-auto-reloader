@@ -1,12 +1,12 @@
 # Bubble Hot Reloader
 
-Automatically reloads Bubble.io's Preview tab whenever you make a change to the app. No need for manual reloads!
+Automatically reloads your Bubble app's Preview tab whenever you make a change in the Bubble Editor. No need for manual reloads!
 
 NOTE: This is a Chrome extension.
 
 ## Description
 
-**Bubble Hot Reloader** eases your development experience using [Bubble.io](https://bubble.io) by automatically reloading your Preview tab in Chrome when you make changes in the Bubble editor. No more manual refreshes — stay focused on building your app!
+**Bubble Hot Reloader** eases your development experience using [Bubble.io](https://bubble.io) by automatically reloading your Preview tab in Chrome whenever you make changes in the Bubble Editor. No more manual refreshes — stay focused on building your app!
 
 ## Features
 
@@ -17,15 +17,19 @@ NOTE: This is a Chrome extension.
 
 ## Installation
 
-Since this extension is still in Beta, you need to manually install it in Chrome by following the below steps:
+Since this extension is in Beta, you need to manually install it in Chrome:
 
-1. Download this repository and extract the files to a folder
-2. Open Chrome and navigate to **chrome://extensions/**
-3. Enable **Developer mode** by toggling the switch in the upper-right corner
-4. Click **Load unpacked** and select the directory where you cloned the repository
+1. Download this repository and extract the files to a folder.
+2. Open Chrome and navigate to **chrome://extensions/**.
+3. Enable **Developer mode** by toggling the switch in the upper-right corner.
+4. Click **Load unpacked** and select the directory where you cloned the repository.
 
 ## Settings
 
-You can access the extension's Settings page by going into Extensions -> Bubble Preview Auto-Reloader -> Menu -> Options
+You can access the extension's Settings page by going into **Extensions** -> **Bubble Hot Reloader** -> **Menu** -> **Options**.
 
-For any setting change to take effect, please manually refresh the Preview tab once.
+- By default, the extension reloads the Bubble Preview tab immediately after a change.
+- If you check the "**Reload ONLY when I shift focus to the preview tab**" option, it will wait until you focus the tab before reloading, potentially reducing how often the page reloads.
+
+**Note:** After changing any setting, manually reload the Preview tab once for the setting to take effect.
+

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Bubble Preview Auto-Reloader",
-  "version": "1.4",
+  "name": "Bubble Hot Reloader",
+  "version": "1.5",
   "description": "Automatically reloads Bubble.io's Preview tabs when an update is detected.",
   "permissions": ["storage", "tabs"],
   "options_page": "options.html",

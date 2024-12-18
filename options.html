@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bubble Preview Auto-Reloader - Options</title>
+  <title>Bubble Hot Reloader - Options</title>
   <style>
     body { font-family: Arial, sans-serif; padding: 20px; }
     label { font-size: 16px; }
+    #flashMessage {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #409841;
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <h2>Bubble Preview Auto-Reloader - Settings</h2>
+  <h2>Bubble Hot Reloader - Settings</h2>
   <label>
-    <input type="checkbox" id="reloadImmediately">
-    Reload immediately after every change
+    <input type="checkbox" id="reloadOnFocus">
+    Reload ONLY when I shift focus to the preview tab (if you want to reduce the number of automatic reloads)
   </label>
+  
+  <div id="flashMessage">Setting saved! Please reload the Preview tab manually once -- for the setting to take effect.</div>
+
   <script src="options.js"></script>
 </body>
 </html>
